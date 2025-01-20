@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seeds Daten in 3D</title>
+  <script src="https://cdn.plot.ly/plotly-2.20.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="tsne.js"></script>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; text-align: center; }
+    #plot { width: 80vw; height: 60vh; margin: 20px auto; }
+    .controls { margin: 10px; }
+    .step-count { margin: 10px; font-size: 1.2em; }
+  </style>
+</head>
+<body>
+  <h1>Seeds Daten in 3D</h1>
+  <div id="plot"></div>
+  <div class="controls">
+    <button id="restart">Restart t-SNE</button>
+    <button id="step">Step</button>
+  </div>
+  <div class="step-count">Step Count: <span id="step-counter">0</span></div>
+  <p>Drücke "Restart", um t-SNE neu zu starten. Mit "Step" kannst du den Algorithmus iterativ berechnen.</p>
+  <script src="app.js"></script>
+</body>
+</html>
