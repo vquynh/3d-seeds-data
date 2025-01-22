@@ -2,7 +2,7 @@
 let tsne, stepCounter = 0, tsneData = [], csvData = [];
 
 // Load CSV Data
-Papa.parse('../seeds.csv', {
+Papa.parse('https://github.com/vquynh/3d-seeds-data/blob/main/seeds.csv', {
   download: true,
   header: false,
   complete: function(results) {
