@@ -11,12 +11,12 @@ body {
     font-weight: 600;
     color: #333;
     margin: 20px 0;
-    font-size: 2em;
+    font-size: 2.5em;
   }
 
   #plot {
     width: 70vw;
-    height: 60vh;
+    height: 70vh;
     margin: 20px auto;
     background: #ffffff;
     border-radius: 15px;
