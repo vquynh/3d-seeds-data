@@ -2,14 +2,15 @@
 let tsne, stepCounter = 0, tsneData = [], csvData = [];
 
 // Load CSV Data
-Papa.parse('https://github.com/vquynh/3d-seeds-data/blob/main/seeds.csv', {
-  download: true,
-  header: false,
-  complete: function(results) {
-    csvData = results.data.map(row => row.slice(0, 7).map(parseFloat)).filter(row => !isNaN(row[0]));
-    initializeTSNE();
-  }
-});
+Papa.parse('./seeds.csv', {
+    download: true,
+    header: false,
+    complete: function(results) {
+      csvData = results.data.map(row => row.slice(0, 7).map(parseFloat)).filter(row => !isNaN(row[0]));
+      initializeTSNE();
+    }
+  });  
+
 
 // Initialize t-SNE
 function initializeTSNE() {
